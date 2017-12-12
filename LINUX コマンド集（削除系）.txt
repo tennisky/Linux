@@ -1,0 +1,12 @@
+####
+#
+#	LINUX コマンド集	削除系
+#
+####
+
+# 空ファイルのみを対象とした削除
+find /usr/src -type f -empty -delete
+
+# 空ディレクトリのみを対象とした削除
+find /usr/src -type d -empty -delete
+
