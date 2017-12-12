@@ -1,0 +1,19 @@
+####
+#
+#	LINUX コマンド集	検索系
+#
+####
+
+# サーバー内にあるファイル容量を確認（サイズの大きい上位10ファイルを表示）
+sudo du -x -h / | sort -r -h | head -10
+
+# ディレクトリ内にあるファイル数を表示
+find /usr/src/ -type f | wc -l
+
+# ディレクトリ内にあるディレクトリ数を表示
+find /usr/src/ -type d | wc -l
+
+# 100日以前の更新された空ファイルの検索
+find /usr/src -empty -mtime +100
+
+
