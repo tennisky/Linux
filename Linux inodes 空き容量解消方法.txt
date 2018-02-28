@@ -1,0 +1,34 @@
+####
+#
+#	Linux inodes 空き容量解消方法
+#
+####
+
+課題：inodes 空き容量がなくなりファイルが作成されなくなる。
+
+ubuntu@ip-172-0-0-1:~$ df -i
+Filesystem     Inodes  IUsed  IFree IUse% Mounted on
+udev           125013    392 124621    1% /dev
+tmpfs          126791    517 126274    1% /run
+/dev/xvda1     524288 443870  80418   85% /		### inodes 空き容量が不足してくる
+tmpfs          126791      1 126790    1% /dev/shm
+tmpfs          126791      4 126787    1% /run/lock
+tmpfs          126791     16 126775    1% /sys/fs/cgroup
+tmpfs          126796      4 126792    1% /run/user/1000
+
+
+原因：最大の要因はOSのアップグレードによるパッケージの追加
+
+
+解消方法：不要になったパッケージを削除する(autoremove)
+
+
+手順：
+
+下記のファイルにあるautoremoveのオプションのコメントアウトを外すと自動で不要なパッケージを削除してくれる。
+/etc/apt/apt.conf.d/50unattended-upgrades
+
+// Do automatic removal of new unused dependencies after the upgrade
+// (equivalent to apt-get autoremove)
+//Unattended-Upgrade::Remove-Unused-Dependencies "true";		# ここのコメントアウトを削除して"true"を設定
+

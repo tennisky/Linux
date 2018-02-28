@@ -16,4 +16,8 @@ find /usr/src/ -type d | wc -l
 # 100日以前の更新された空ファイルの検索
 find /usr/src -empty -mtime +100
 
+# カレントディレクトリ以下のディレクトリのファイル数を検索
+find . -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+
 

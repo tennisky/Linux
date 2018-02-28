@@ -1,0 +1,18 @@
+####
+#
+#	Linux 参考URL
+#
+####
+
+# Linuxシステムの仕組みと運用、管理
+https://manual.atmark-techno.com/armadillo-guide/armadillo-guide-2_ja-1.0.0/ch03.html#sec_inode
+
+# 「apt-get」はもう古い？新しい「apt」コマンドを使ったUbuntuのパッケージ管理
+https://linuxfan.info/package-management-ubuntu
+
+# Ubuntu 16.04 / Debian 8: aptコマンドの使い方
+https://www.hiroom2.com/2016/05/12/ubuntu-16-04-debian-8%E3%81%AEapt%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/
+
+# linux - inodeの使用を解放するには？
+https://code.i-harness.com/ja/q/9f728
+
